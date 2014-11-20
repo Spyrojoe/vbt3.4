@@ -182,6 +182,8 @@ footer li:first-of-type{
 
 .grid{
 	width: 100%;
+	padding: 20px 0;
+	background: darkgray;
 	font-family: sans-serif;
 }
 .col{
@@ -189,6 +191,7 @@ footer li:first-of-type{
 	float: left;
 	position: relative;
 	/*background-repeat: no-repeat;*/
+	background-size: 100%;
 	overflow: hidden;
 }
 .col:hover{
@@ -200,13 +203,13 @@ footer li:first-of-type{
 }
 .col-3:first-of-type{
 	background-color: rgba(255,255,255,.5);
-	background-image: url('img/sitepreview-vw.jpg');
+	background-image: url('img/visionworks.png');
 }
 .col-3:nth-of-type(2){
-	background-image: url('img/sitepreview-extraco.jpg');
+	background-image: url('img/wingstop.png');
 }
 .col-3:last-of-type{
-	background-image: url('img/sitepreview-wingstop.jpg');
+	background-image: url('img/extraco.png');
 }
 .caption{
 	position: absolute;
