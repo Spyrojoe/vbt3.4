@@ -276,7 +276,7 @@ footer li:first-of-type{
 	}
 	.contact-button{
 		display: inline-block;
-		width: 33%;
+		width: 33.33%;
 		margin: 0 auto;
 		float: left;
 	}
