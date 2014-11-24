@@ -28,7 +28,7 @@
 				<div class="browser-button" id="browser-button-01"></div>
 				<div class="browser-button" id="browser-button-02"></div>
 				<div class="browser-button" id="browser-button-03"></div>
-				<p>Hi there! My name's Brad, and I'm a web developer in Dallas, Texas.</p>
+				<p>Hi there! My name's Brad, and I'm a web developer in Dallas.</p>
 				<p>Unfortunately, the place is kind of a mess right now. This is going to be my new portfolio site, but as you can see, there isn't much here at the moment.</p>
 				<p>But hey, that isn't you're problem. It would be pretty rude if I didn't show you <em>something</em>, so here are a couple of sites I've been lucky enough to work on...</p>
 			</div>
@@ -38,84 +38,56 @@
 
 
 	<div class="grid">
-		<div class="row row-1">
-			<div class="col col-3">
-				<div class="caption">
-					<a href="http://www.visionworks.com">
-						<h2>Visionworks</h2>
-					</a>
-					<p>An eye care provider with over 600 retail locations nationwide.</p>
-				</div>
-			</div>
-			<div class="col col-3">
-				<div class="caption">
-					<a href="http://www.extracobanks.com">
-						<h2>Extraco Banks</h2>
-					</a>
-					<p>One of the largest independant financial institutions in the central Texas region</p>
-				</div>
-			</div>
-			<div class="col col-3">
-				<div class="caption">
-					<a href="http://www.wingstop.com">
-						<h2>Wingstop</h2>
-					</a>
-					<p>The most recocnizable brand in the wing business.</p>
-				</div>
+		<div class="col visionworks">
+			<div class="caption">
+				<a href="http://www.visionworks.com">
+					<h2>Visionworks</h2>
+				</a>
+				<p>An eye care provider with over 600 retail locations nationwide.</p>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col col-3">
-				<div class="caption">
-					<a href="#">
-						<h2>Client</h2>
-					</a>
-					<p>Tacos taco tacos tacos tacos tacos</p>
-				</div>
+		<div class="col wingstop">
+			<div class="caption">
+				<a href="http://www.wingstop.com">
+					<h2>Wingstop</h2>
+				</a>
+				<p>The most recocnizable brand in the wing business.</p>
 			</div>
-			<div class="col col-3">
-				<div class="caption">
-					<a href="#">
-						<h2>Client</h2>
-					</a>
-					<p>Tacos taco tacos tacos tacos tacos</p>
-				</div>
+		</div>
+		<div class="col extraco">
+			<div class="caption">
+				<a href="http://www.extracobanks.com">
+					<h2>Extraco Banks</h2>
+				</a>
+				<p>One of the largest independant financial institutions in the central Texas region</p>
 			</div>
-			<div class="col col-3">
-				<div class="caption">
-					<a href="#">
-						<h2>Client</h2>
-					</a>
-					<p>Tacos taco tacos tacos tacos tacos</p>
-				</div>
+		</div>
+		<div class="col apollo">
+			<div class="caption">
+				<a href="http://www.apollointeractive.com">
+					<h2>Apollo Interactive</h2>
+				</a>
+				<p>A digital advertising agency in downtown Dallas.</p>
+			</div>
+		</div>
+		<div class="col curves">
+			<div class="caption">
+				<a href="http://www.curves.se">
+					<h2>Curves Sweden</h2>
+				</a>
+				<p>The largest chain of fitness centers for women in the world.</p>
+			</div>
+		</div>
+		<div class="col smg">
+			<div class="caption">
+				<a href="http://www.studiomoviegrill.com">
+					<h2>Studio Movie Grill</h2>
+				</a>
+				<p>First-fun movies with in-theater dining.</p>
 			</div>
 		</div>
 	</div>
 
-
-<!--
-<section class="work wrap clfx">
-	<article class="clfx">
-		<a href="http://www.visionworks.com"><img src="img/sitepreview-vw.jpg"></a>
-		<a href="http://www.visionworks.com"><h1>Visionworks</h1></a>
-		<p>Visionworks is an eye care provider with over 600 retail locations nationwide. I've built email advertisments, for them, implemented responsive features, and built the nifty little "What frame are you looking for?" tool (Click on the womens, mens or kids sections to see it.)</p>
-	</article>
-	
-
-	
-	<article class="copyright clfx">
-		<a href="http://www.extracobanks.com"><img src="img/sitepreview-extraco.jpg"></a>
-		<a href="http://www.extracobanks.com"><h1>Extraco Banks</h1></a>
-		<p>One of the largest independant financial institutions in the central Texas region, Extraco Banks services 145,000 customers across 18 locations.</p>
-	</article>
-
-	<article class="copyleft clfx">
-		<a href="http://curves.se"><img src="img/sitepreview-curves.jpg"></a>
-		<a href="http://curves.se"><h1>Curves Sweden</h1></a>
-	</article>
-
-</section>
--->
 <footer>
 	<div class="wrap">
 		<h1><span>Brad</span> Brock</h1>
@@ -127,21 +99,20 @@
 </footer>
 <script type="text/javascript">
 $(document).ready(function(){
-	var colHeight = $('.col').height();
-	$('.caption').css({
-		'padding-left': 10,
-		'top': '220px',
-		'height': colHeight
-	});
-	$('.col').hover(function(){
-		$(this).find('.caption').animate({
-			'top': '0'
-		}, 300);
-	}, function(){
-		$(this).find('.caption').animate({
-			'top': '220px'
-		}, 300);
-	});
+
+	$('.caption').css('opacity', '0');
+	$('.col').hover(
+		function(){
+			$(this).children().animate({
+				opacity: 1
+			}, 300);
+		},
+		function(){
+			$(this).children().animate({
+				opacity: 0
+			}, 300);
+		}
+	);
 });
 </script>
 </body>
