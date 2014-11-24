@@ -193,9 +193,14 @@ footer li:first-of-type{
 	/*background-repeat: no-repeat;*/
 	background-size: 100%;
 	overflow: hidden;
+	transform: scale(1);
+  	transition: transform .1s ease;
 }
 .col:hover{
 	cursor: pointer;
+	z-index: 100;
+	transform: scale(1.15);
+	transition: transform .1s ease;
 }
 .col-3{
 	width: 33.33%;
