@@ -2,6 +2,10 @@ p,h1,h2,h3,h4,h5,h6,a,div,section{
 	padding: 0;
 	margin: 0;
 }
+h1{
+	font-family: 'Dosis', sans-serif;
+	font-weight: 300;
+}
 div, section, article, header{
 	box-sizing: border-box;
 }
@@ -26,8 +30,9 @@ header{
 header h1{
 	font-size: 2.83em;
 }
-header span{
-	border: 3px black solid;
+h1 span{
+	border: 2px black solid;
+	margin-right: 4px;
 }
 section{
 	width: 100%;
@@ -141,19 +146,6 @@ p{
 	float: left;
 	box-shadow: 0px 15px 17px -12px rgba(0,0,0,0.5);
 }
-.work h1{
-	margin-bottom: 20px;
-	text-align: center;
-	font-family: 'Dosis', 'helvetica neue', 'arial', sans-serif;
-	font-size: 2.5em;
-	font-weight: 300;
-}
-.work div{
-	display: inline-block;
-	width: 100%;
-	max-width: 440px;
-	vertical-align: top;
-}
 
 footer{
 	color: gray;
@@ -171,19 +163,26 @@ footer ul{
 footer li{
 	display: inline-block;
 	padding: 0 8px;
+	border-right: 1px gray solid;
 }
 footer a{
 	text-decoration: none;
 	color: black;
 }
 footer li:first-of-type{
-	border-right: 1px gray solid;
+	padding-left: 0;
+}
+footer li:last-of-type{
+	border-right: none;
 }
 
 .grid{
 	width: 100%;
 	background: darkgray;
 	font-family: sans-serif;
+	-webkit-box-shadow: 0px 5px 75px 1px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 5px 75px 1px rgba(0,0,0,0.2);
+	box-shadow: 0px 5px 75px 1px rgba(0,0,0,0.2);
 }
 .col{
 	display: block;
@@ -243,6 +242,12 @@ footer li:first-of-type{
 	line-height: 1.4em;
 }
 
+.work h1{
+	margin: 24px auto;
+	font-size: 2.5em;
+	font-weight: 300;
+	font-family: 'Dosis', sans-serif;
+}
 
 .blink {
  	animation: blink 1s steps(5, start) infinite;
@@ -256,7 +261,7 @@ footer li:first-of-type{
  	to { visibility: hidden; }
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
 	.wrap{
 		width: 90%;
 	}
@@ -297,18 +302,7 @@ footer li:first-of-type{
 	.contact-button a{
 		font-size: .8em;
 	}
-	.work{
-		padding: 30px 0;
-	}
-	.work article{
-		margin: 0 auto 12px;
-	}
-	.work article:last-of-type{
-		margin-bottom: 0;
-	}
-	.work a{
-		display: block;
-	}
+
 	.copyleft p{
 		display: none;
 	}
@@ -354,7 +348,7 @@ footer li:first-of-type{
 		width: 50%;
 	}
 }
-@media screen and (max-width: 350px){
+@media screen and (max-width: 380px){
 	.col{
 		float: none;
 		width: 100%;
