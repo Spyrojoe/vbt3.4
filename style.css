@@ -190,7 +190,10 @@ footer li:last-of-type{
 	position: relative;
 	width: 33.33%;
 	min-height: 220px;
-	background-size: 100%;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-origin: content-box;
+	background-position: top, center;
 	overflow: hidden;
 	transform: scale(1);
   	transition: transform .1s ease;
